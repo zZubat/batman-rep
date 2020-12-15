@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Linha from './components/Linha';
 import {Header} from 'react-native-elements';
-import api from './api';
+import api from './data/Api';
 
 const App = () => {
   const [filmes, setFilmes] = useState([]);
