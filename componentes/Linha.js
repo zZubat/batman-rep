@@ -6,22 +6,25 @@ const Linha = (props) => {
         <View style={styles.container}>
             <View style={styles.left}>
                 <Image
-                    source={{uri: `https://raw.githubusercontent.com/michelzenatti/prestacaodeservico/master/.github/images/${props.foto}`}}
+                    source={{uri: `http://www.omdbapi.com/?apikey=67f2f4c&&s=batman${props.Poster}`}}
                     style={{height: 100, width: 100}}
                 />
             </View>
-            <Text style={styles.nome}>
-                {props.nome}
+            <Text style={styles.Title}>
+                {props.Title}
             </Text>
             <View style={styles.footer}>
                 <Text>
-                    {props.profissao}
+                    {props.Year}
                 </Text>
                 <Text>
-                    {props.telefone}
+                    {props.imdbID}
                 </Text>
-                <Text style={styles.avaliacao}>
-                    {props.avaliacao}
+                <Text style={styles.Type}>
+                    {props.Type}
+                </Text>
+                <Text>
+                    {props.Poster}
                 </Text>
             </View>
         </View>

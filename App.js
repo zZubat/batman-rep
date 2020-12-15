@@ -29,9 +29,13 @@ const App = () => {
         data={filmes}
         keyExtractor={(item)=> item.key.toString()}
         renderItem={ ({item}) => 
-          <TouchableOpacity>
-            <Linha nome={item.nome} foto={item.img} profissao={item.profissao} telefone={item.telefone} avaliacao={item.avaliacao} />
-          </TouchableOpacity>
+          <View>
+            <Linha Title={item.title} 
+            Year={item.Year} 
+            imdbID={item.imdbID} 
+            Type={item.Type} 
+            Poster={item.Poster} />
+          </View>
       }
       />
       </View>
