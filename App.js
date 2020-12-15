@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Linha from './components/Linha';
+import Linha from './componentes/Linha';
 import {Header} from 'react-native-elements';
 import api from './data/Api';
 
