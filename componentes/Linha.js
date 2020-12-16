@@ -6,7 +6,7 @@ const Linha = (props) => {
         <View style={styles.container}>
             <View style={styles.left}>
                 <Image
-                    source={{uri: `http://www.omdbapi.com/?apikey=67f2f4c&&s=batman${props.Poster}`}}
+                    source={{uri: `"https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"${props.Poster}`}}
                     style={{height: 100, width: 100}}
                 />
             </View>

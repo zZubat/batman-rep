@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import Linha from './componentes/Linha';
 import {Header} from 'react-native-elements';
-import api from './data/Api';
+import Api from './data/Api';
 
 const App = () => {
-  const [filmes, setFilmes] = useState([]);
+  const [Search, setFilmes] = useState([]);
 
   useEffect(() => {
     carregaFilmes();
@@ -13,7 +13,7 @@ const App = () => {
 
   async function carregaFilmes(){
     setFilmes([]);
-    const response = await api.get('/db');
+    const response = await Api.get('/db');
     setFilmes(response['data'].dados);
 }
 
@@ -26,15 +26,15 @@ const App = () => {
           rightComponent={{ icon: 'home', color: '#fff' }}
       />
       <FlatList
-        data={filmes}
-        keyExtractor={(item)=> item.key.toString()}
-        renderItem={ ({item}) => 
+        data={Search}
+        keyExtractor={(imdbID)=> imdbID.key.toString()}
+        renderItem={ ({imdbID}) => 
           <View>
-            <Linha Title={item.title} 
-            Year={item.Year} 
-            imdbID={item.imdbID} 
-            Type={item.Type} 
-            Poster={item.Poster} />
+            <Linha Title={imdbID.title} 
+            Year={imdbID.Year} 
+            //imdbID={item.imdbID} 
+            Type={imdbID.Type} 
+            Poster={imdbID.Poster} />
           </View>
       }
       />
